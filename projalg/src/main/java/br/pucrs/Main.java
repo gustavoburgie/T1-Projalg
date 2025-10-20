@@ -10,23 +10,24 @@ public class Main {
         String a = "HELLO123WORLDX67";
         String b = "H1E2L3L4O5W6O7R8L9D0X";
 
-        System.out.println("\nS1: \"" + a + "\"\nS2: \"" + b + "\"\n");
-        String a1 = "AGGTABOH";
-        String b1 = "GXTXAYBIOOH";
+        String a1 = "ALGORITMO";
+        String b1 = "EZSXPYIOWRVIUTMTO";
+        
+        System.out.println("\nS1: \"" + a1 + "\"\nS2: \"" + b1 + "\"\n");
 
-        ///*
+        //Parte recursiva
         long startTime = System.nanoTime();
-        int res1 = LCS_recursivo(a, b, a.length(), b.length());
+        int res1 = LCS_recursivo(a1, b1, a1.length(), b1.length());
         long endTime = System.nanoTime();
         System.out.println("Recursivo -\nLCS: " + res1);
         System.out.println("Iterações: " + iter);
         long tempo = endTime - startTime;   //tempo em nanossegundos
         System.out.println("Tempo de execução: " + tempo/1000 + " microsseg");
-        //*/
 
+        //Parte programação dinâmica
         iter = 0;
         long startTime2 = System.nanoTime();
-        int res2 = LCS_prog_dinamica(a, b);
+        int res2 = LCS_prog_dinamica(a1, b1);
         long endTime2 = System.nanoTime();
         System.out.println("\nProg Dinamica -\nLCS: " + res2);
         System.out.println("Iterações: " + iter);
@@ -57,7 +58,7 @@ public class Main {
             for(int j = 0; j <= n; j++) {
                 iter++;
                 if(i == 0 || j == 0) {
-                    dp[i][j] = 0;   //inicializa com 0
+                    dp[i][j] = 0;   //inicializa a primeira linha e coluna com 0
                 } else if(s1.charAt(i-1) == s2.charAt(j-1)) {
                     dp[i][j] = dp[i-1][j-1] + 1;
                 } else {
