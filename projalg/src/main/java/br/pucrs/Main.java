@@ -7,17 +7,17 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("\n.");
 
-        String a = "HELLO123WORLDX67";
-        String b = "H1E2L3L4O5W6O7R8L9D0X";
+        //String a = "HELLO123WORLDX67";
+        //String b = "H1E2L3L4O5W6O7R8L9D0X";
 
-        String a1 = "ALGORITMO";
-        String b1 = "EZSXPYIOWRVIUTMTO";
+        String a = "ALGORITMO";
+        String b = "EZSXPYIOWRVIUTMTO";
         
-        System.out.println("\nS1: \"" + a1 + "\"\nS2: \"" + b1 + "\"\n");
+        System.out.println("\nS1: \"" + a + "\"\nS2: \"" + b + "\"\n");
 
         //Parte recursiva
         long startTime = System.nanoTime();
-        int res1 = LCS_recursivo(a1, b1, a1.length(), b1.length());
+        int res1 = LCS_recursivo(a, b, a.length(), b.length());
         long endTime = System.nanoTime();
         System.out.println("Recursivo -\nLCS: " + res1);
         System.out.println("Iterações: " + iter);
@@ -27,7 +27,7 @@ public class Main {
         //Parte programação dinâmica
         iter = 0;
         long startTime2 = System.nanoTime();
-        int res2 = LCS_prog_dinamica(a1, b1);
+        int res2 = LCS_prog_dinamica(a, b);
         long endTime2 = System.nanoTime();
         System.out.println("\nProg Dinamica -\nLCS: " + res2);
         System.out.println("Iterações: " + iter);
