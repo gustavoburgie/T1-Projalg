@@ -1,11 +1,11 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class MainTest {
+public class LCSTest {
     
     @Test
     public void testeLCSRecursivo(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "AGGTAB";
         String b = "GXTXAYB";
         int res = main.LCS_recursivo(a, b, a.length(), b.length());
@@ -14,7 +14,7 @@ public class MainTest {
     
     @Test
     public void LCSRec1(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "ABCD";
         String b = "ACBAD";
         int res = main.LCS_recursivo(a, b, a.length(), b.length());
@@ -23,7 +23,7 @@ public class MainTest {
     
     @Test
     public void LCSRec2(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "INCREMENTE";
         String b = "LAMEXNTO";
         int res = main.LCS_recursivo(a, b, a.length(), b.length());
@@ -32,7 +32,7 @@ public class MainTest {
 
     @Test
     public void LCSRec3(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "HELLO123WORLDX67";
         String b = "H1E2L3L4O5W6O7R8L9D0X";
         int res = main.LCS_recursivo(a, b, a.length(), b.length());
@@ -41,7 +41,7 @@ public class MainTest {
 
     @Test
     public void testeLCSProgDinamica(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "AGGTAB";
         String b = "GXTXAYB";
         int res = main.LCS_prog_dinamica(a, b);
@@ -50,7 +50,7 @@ public class MainTest {
 
     @Test
     public void LCS_PD1(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "ABCD";
         String b = "ACBAD";
         int res = main.LCS_prog_dinamica(a, b);
@@ -59,7 +59,7 @@ public class MainTest {
 
     @Test
     public void LCS_PD2(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "INCREMENTE";
         String b = "LAMEXNTO";
         int res = main.LCS_prog_dinamica(a, b);
@@ -68,7 +68,7 @@ public class MainTest {
 
     @Test
     public void LCS_PD3(){
-        br.pucrs.Main main = new br.pucrs.Main();
+        br.pucrs.LCS main = new br.pucrs.LCS();
         String a = "HELLO123WORLDX67";
         String b = "H1E2L3L4O5W6O7R8L9D0X";
         int res = main.LCS_prog_dinamica(a, b);
